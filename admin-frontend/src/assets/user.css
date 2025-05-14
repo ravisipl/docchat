@@ -1,0 +1,132 @@
+/* User Area Custom Styles */
+
+.user-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.user-sider {
+  background-color: #fff;
+  border-right: 1px solid #e6e6e6;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 8px 0 rgba(29,35,41,.05);
+  overflow: hidden auto;
+}
+
+.user-sider-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-sider-top {
+  padding: 16px;
+}
+
+.user-sider-menu {
+  flex: 1;
+  overflow: hidden auto;
+}
+
+.user-sider-bottom {
+  padding: 16px;
+  border-top: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.user-header {
+  background: #fff;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  box-shadow: 0 2px 8px 0 rgba(29,35,41,.05);
+  height: 64px;
+  transition: all 0.2s;
+}
+
+.user-header-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-content {
+  margin-top: 64px;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.user-content-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+/* Login Page Styles */
+.user-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.user-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  border: none !important;
+  padding: 32px 24px;
+  background: #fff;
+}
+
+.user-card .ant-card-head {
+  border: none;
+  text-align: center;
+  background: transparent;
+}
+
+.user-card .ant-card-head-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.user-card .ant-form-item {
+  margin-bottom: 20px;
+}
+
+.user-card .ant-input-affix-wrapper,
+.user-card .ant-input,
+.user-card .ant-input-password {
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.user-card .ant-btn-primary {
+  background: #1677ff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.08);
+}
+
+@media (max-width: 480px) {
+  .user-card {
+    padding: 16px 4px;
+    max-width: 95vw;
+  }
+}

@@ -1,0 +1,52 @@
+Need to create a doc bot where the admin will manage/upload documents from backend
+The user from frontend can ask any query with respect to those documents
+The system will manage chat history of the user
+While response the system will also show the citation/source of the document from where the response is generated
+
+
+User Uploads → Backend (LangChain DocumentLoader + TextSplitter) → 
+Embeddings Created (Gemini API) → 
+Stored in VectorDB → PGsql
+User Queries →
+LangChain Retriever (top k documents) → 
+Gemini LLM generates Answer →
+Citations (document source info) attached →
+Chat Stored →
+Answer sent to React Frontend
+
+
+
+
+Objective:
+Implement a separate user workflow within the same application (NOT a new project), using a different layout/view than admin.
+⚠️ Do NOT modify or reuse any part of the existing admin layout — it is working fine and must remain untouched.
+
+✅ Requirements:
+User Roles (Already Implemented):
+
+Admin – fully functional, no changes required.
+
+User – needs a separate interface and flow (to be developed). after login user would rediret on seprate window where we can perform the chant on uploaded documet.
+
+User Experience:
+
+On login, if the user is of type user, redirect to a new layout/view distinct from the admin panel.
+
+The user view must allow querying documents that were uploaded by admins only.
+
+Search Flow:
+
+User enters query →
+LangChain Retriever fetches top-K documents from admin uploads →
+Gemini LLM generates an answer →
+Include citations (source file info) →
+Store entire conversation (question, answer, sources) in DB →
+Return response to React frontend
+Constraints:
+
+Do not create a new project — everything must be inside the existing app structure.
+
+Use a new layout and route set for users (e.g., layouts/UserLayout, routes/user/*).
+
+Do not affect any functionality of the admin panel.
+

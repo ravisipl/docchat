@@ -1,0 +1,54 @@
+/* Admin Area Custom Styles */
+
+.admin-layout {
+  min-height: 100vh;
+}
+
+.admin-sider {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.admin-logo {
+  height: 64px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-logo-title {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+  transition: font-size 0.2s;
+}
+
+.admin-header {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--ant-color-bg-container, #fff);
+}
+
+.admin-header-section {
+  padding: 0 24px;
+}
+
+.admin-content {
+  margin: 24px 16px;
+  padding: 24px;
+  min-height: 280px;
+  border-radius: var(--ant-border-radius-lg, 8px);
+  background: var(--ant-color-bg-container, #fff);
+  transition: all 0.2s;
+}
